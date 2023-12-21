@@ -1,8 +1,4 @@
-use std::{
-    collections::{hash_map, HashMap},
-    fs::File,
-    io::Read,
-};
+use std::{collections::HashMap, fs::File, io::Read};
 
 fn part_one(content: &str) -> i32 {
     let mut max_cube: HashMap<&str, i32> = HashMap::new();

@@ -2,7 +2,7 @@ use std::fs::File;
 use std::i32;
 use std::io::Read;
 
-fn partOne(content: &str) -> i32 {
+fn part_one(content: &str) -> i32 {
     let mut total = 0;
 
     for line in content.lines() {
@@ -23,7 +23,7 @@ fn partOne(content: &str) -> i32 {
     return total;
 }
 
-fn partTwo(content: &str) -> i32 {
+fn part_two(content: &str) -> i32 {
     let mut total = 0;
     let numbers = vec![
         "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
@@ -60,10 +60,11 @@ fn partTwo(content: &str) -> i32 {
 }
 
 fn main() {
-    let mut file = File::open("src/part-two.txt").unwrap();
+    let mut file = File::open("src/input.txt").unwrap();
     let mut content = String::new();
     file.read_to_string(&mut content).unwrap();
 
     // println!("THE TOTAL IS {}", partOne(&content));
-    println!("THE TOTAL IS {}", partTwo(&content));
+    println!("PART ONE {}", part_one(&content));
+    println!("PART TWO {}", part_two(&content));
 }
